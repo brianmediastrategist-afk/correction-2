@@ -147,12 +147,12 @@ const Index = () => {
             </div>
 
             {/* Right Column - Meeting Card */}
-            <div className="flex-1 lg:flex-[1.5]">
-              <div className="bg-card rounded-xl p-8 shadow-lg border-2 border-accent hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="h-[600px] bg-muted rounded-lg overflow-hidden overflow-x-hidden">
+            <div className="w-full lg:flex-1 lg:flex-[1.5]">
+              <div className="bg-card rounded-xl p-4 sm:p-8 shadow-lg border-2 border-accent hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="h-[500px] sm:h-[600px] bg-muted rounded-lg overflow-hidden">
                   <iframe
                     src="https://kinovadigitalmarketing.com/meetings/bkinavusha"
-                    className="w-full h-full border-0 overflow-x-hidden"
+                    className="w-full h-full border-0"
                     title="Schedule a Meeting"
                     scrolling="no"
                   />
