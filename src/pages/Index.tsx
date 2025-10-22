@@ -155,10 +155,12 @@ const Index = () => {
                     Choose a time that works best for you and let's discuss how
                     we can accelerate your growth.
                   </p>
-                  <div className="h-96 bg-muted rounded-lg flex items-center justify-center">
-                    <p className="text-muted-foreground">
-                      [HubSpot Calendar Integration]
-                    </p>
+                  <div className="h-96 bg-muted rounded-lg overflow-hidden">
+                    <iframe
+                      src="https://kinovadigitalmarketing.com/meetings/bkinavusha"
+                      className="w-full h-full border-0"
+                      title="Schedule a Meeting"
+                    />
                   </div>
                 </div>
               </div>
