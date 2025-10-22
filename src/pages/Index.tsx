@@ -131,7 +131,7 @@ const Index = () => {
       {/* Discovery Section */}
       <section id="discovery" className="py-24 lg:py-32 bg-muted">
         <div className="container mx-auto">
-          <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-20">
+          <div className="flex flex-col items-stretch gap-12">
             {/* Left Column - Text */}
             <div className="flex-1 space-y-8">
               <h2 className="text-4xl lg:text-5xl font-bold text-secondary leading-tight">
@@ -147,13 +147,14 @@ const Index = () => {
             </div>
 
             {/* Right Column - Meeting Card */}
-            <div className="w-full lg:flex-1 lg:flex-[1.5]">
+            <div className="w-full">
               <div className="bg-card rounded-xl p-4 sm:p-8 shadow-lg border-2 border-accent hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="h-[700px] sm:h-[750px] bg-muted rounded-lg overflow-auto">
+                <div className="h-[1000px] sm:h-[1100px] md:h-[1200px] bg-muted rounded-lg overflow-hidden overflow-x-hidden">
                   <iframe
                     src="https://kinovadigitalmarketing.com/meetings/bkinavusha"
-                    className="w-full min-h-[700px] sm:min-h-[750px] border-0"
+                    className="w-full h-full border-0"
                     title="Schedule a Meeting"
+                    loading="lazy"
                   />
                 </div>
               </div>
