@@ -45,7 +45,7 @@ const Index = () => {
 
       {/* Hero Section */}
       <section id="home" className="relative py-24 lg:py-32 overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
-        <div className="container mx-auto px-4 lg:px-8">
+        <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
             {/* Left Column - Text */}
             <div className="flex-1 max-w-2xl space-y-8 animate-fade-in">
@@ -130,7 +130,7 @@ const Index = () => {
 
       {/* Discovery Section */}
       <section id="discovery" className="py-24 lg:py-32 bg-muted">
-        <div className="container mx-auto px-4 lg:px-8">
+        <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-20">
             {/* Left Column - Text */}
             <div className="flex-1 space-y-8">
@@ -169,7 +169,7 @@ const Index = () => {
 
       {/* What I Do Section */}
       <section id="about" className="py-24 lg:py-32 bg-background">
-        <div className="container mx-auto px-4 lg:px-8 text-center">
+        <div className="container mx-auto text-center">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-secondary">What I Do</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-16 leading-relaxed">
             I design and implement custom digital strategies that help
@@ -203,7 +203,7 @@ const Index = () => {
 
       {/* Funnel Grid */}
       <section id="services" className="py-24 lg:py-32 bg-muted">
-        <div className="container mx-auto px-4 lg:px-8">
+        <div className="container mx-auto">
           <h2 className="text-4xl lg:text-5xl font-bold text-center mb-16 text-secondary">
             Funnel Services
           </h2>
@@ -242,7 +242,7 @@ const Index = () => {
 
       {/* Automation Grid */}
       <section id="automations" className="py-24 lg:py-32 bg-background">
-        <div className="container mx-auto px-4 lg:px-8">
+        <div className="container mx-auto">
           <h2 className="text-4xl lg:text-5xl font-bold text-center mb-16 text-secondary">
             Automation Solutions
           </h2>
@@ -284,7 +284,7 @@ const Index = () => {
 
       {/* FAQ Section */}
       <section className="py-24 lg:py-32 bg-background">
-        <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
+        <div className="container mx-auto max-w-3xl">
           <h2 className="text-4xl lg:text-5xl font-bold text-center mb-16 text-secondary">
             Frequently Asked Questions
           </h2>
@@ -348,7 +348,7 @@ const Index = () => {
 
       {/* Footer */}
       <footer id="contact" className="py-12 bg-muted border-t">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Left Column */}
             <div>
