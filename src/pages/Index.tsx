@@ -149,19 +149,12 @@ const Index = () => {
             {/* Right Column - Meeting Card */}
             <div className="flex-1">
               <div className="bg-card rounded-xl p-8 shadow-lg border-2 border-accent hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="space-y-4">
-                  <h3 className="text-2xl font-bold">Schedule Your Call</h3>
-                  <p className="text-muted-foreground">
-                    Choose a time that works best for you and let's discuss how
-                    we can accelerate your growth.
-                  </p>
-                  <div className="h-96 bg-muted rounded-lg overflow-hidden">
-                    <iframe
-                      src="https://kinovadigitalmarketing.com/meetings/bkinavusha"
-                      className="w-full h-full border-0"
-                      title="Schedule a Meeting"
-                    />
-                  </div>
+                <div className="h-96 bg-muted rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://kinovadigitalmarketing.com/meetings/bkinavusha"
+                    className="w-full h-full border-0"
+                    title="Schedule a Meeting"
+                  />
                 </div>
               </div>
             </div>
