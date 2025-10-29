@@ -195,33 +195,97 @@ const Index = () => {
       </section>
 
       {/* Discovery Section */}
-      <section id="discovery" className="py-24 lg:py-32 bg-muted">
-        <div className="container mx-auto">
-          <div className="flex flex-col items-stretch gap-12">
+      <section id="discovery" className="py-24 lg:py-32 bg-gradient-to-br from-muted via-background to-muted relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/2 left-1/4 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container mx-auto relative z-10">
+          <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
             {/* Left Column - Text */}
-            <div className="flex-1 space-y-8">
-              <h2 className="text-4xl lg:text-5xl font-bold text-secondary leading-tight">
+            <div className="flex-1 space-y-8 lg:sticky lg:top-24">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 rounded-full border border-accent/20">
+                <span className="w-2 h-2 bg-accent rounded-full"></span>
+                <span className="text-sm font-semibold text-accent">Free Consultation</span>
+              </div>
+
+              <h2 className="text-5xl lg:text-6xl font-black leading-tight" style={{ background: 'var(--gradient-text)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                 Let's Build Systems That Sell For You
               </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                We create automated systems that attract ideal clients and loop
-                loyal customers, freeing up hours to focus on growth.
+
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
+                We create automated systems that attract ideal clients and loop loyal customers, freeing up hours to focus on growth.
               </p>
-              <Button size="lg" onClick={scrollToDiscovery} className="mt-2">
-                Book a Meeting
-              </Button>
+
+              <div className="space-y-4 pt-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-secondary">30-Minute Strategy Call</h3>
+                    <p className="text-sm text-muted-foreground">Discover opportunities in your business</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-secondary">Custom Action Plan</h3>
+                    <p className="text-sm text-muted-foreground">Tailored strategy for your goals</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-secondary">Zero Obligation</h3>
+                    <p className="text-sm text-muted-foreground">Just value and insights</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-6 pt-6 border-t border-secondary/10">
+                <div className="flex -space-x-3">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary/70 border-2 border-white flex items-center justify-center text-white font-bold">JM</div>
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-accent/70 border-2 border-white flex items-center justify-center text-white font-bold">SK</div>
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-secondary to-secondary/70 border-2 border-white flex items-center justify-center text-white font-bold">AL</div>
+                </div>
+                <div>
+                  <div className="font-bold text-secondary">Join 250+ Business Owners</div>
+                  <div className="text-sm text-muted-foreground">Who scaled with our systems</div>
+                </div>
+              </div>
             </div>
 
             {/* Right Column - Meeting Card */}
-            <div className="w-full">
-              <div className="bg-card rounded-xl p-4 sm:p-8 shadow-lg border-2 border-accent hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="h-[1000px] sm:h-[1100px] md:h-[1200px] bg-muted rounded-lg overflow-hidden overflow-x-hidden">
-                  <iframe
-                    src="https://kinovadigitalmarketing.com/meetings/bkinavusha"
-                    className="w-full h-full border-0"
-                    title="Schedule a Meeting"
-                    loading="lazy"
-                  />
+            <div className="flex-1 w-full lg:w-auto">
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary via-accent to-primary rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-500"></div>
+                <div className="relative bg-white rounded-2xl overflow-hidden" style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.15)' }}>
+                  <div className="bg-gradient-to-r from-primary to-accent p-6">
+                    <h3 className="text-2xl font-black text-white">Schedule Your Free Strategy Call</h3>
+                    <p className="text-white/90 mt-2">Pick a time that works for you</p>
+                  </div>
+                  <div className="h-[900px] lg:h-[1000px] bg-muted/30 overflow-hidden overflow-x-hidden">
+                    <iframe
+                      src="https://kinovadigitalmarketing.com/meetings/bkinavusha"
+                      className="w-full h-full border-0"
+                      title="Schedule a Meeting"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
