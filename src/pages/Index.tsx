@@ -44,84 +44,110 @@ const Index = () => {
       <Header />
 
       {/* Hero Section */}
-      <section id="home" className="relative py-24 lg:py-32 overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
-        <div className="container mx-auto">
+      <section id="home" className="relative py-32 lg:py-40 overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 -left-48 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container mx-auto relative z-10">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
             {/* Left Column - Text */}
-            <div className="flex-1 max-w-2xl space-y-8 animate-fade-in">
-              <h1 className="text-6xl lg:text-8xl font-black leading-none text-secondary">
-                Build Funnels That Convert
+            <div className="flex-1 max-w-2xl space-y-10 animate-fade-in">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
+                <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                <span className="text-sm font-semibold text-primary">Trusted by 250+ Businesses</span>
+              </div>
+
+              <h1 className="text-6xl lg:text-8xl font-black leading-[0.95] tracking-tight" style={{ background: 'var(--gradient-text)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                Build Funnels<br/>That Convert
               </h1>
-              <p className="text-xl lg:text-2xl text-muted-foreground font-medium max-w-xl">
+
+              <p className="text-xl lg:text-2xl text-muted-foreground font-medium max-w-xl leading-relaxed">
                 Automated marketing systems that attract clients and scale revenue — without the guesswork.
               </p>
+
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   onClick={scrollToDiscovery}
-                  className="text-lg px-8 py-6 h-auto rounded-full shadow-lg flex items-center gap-2 group"
+                  className="text-lg px-10 py-7 h-auto rounded-full font-semibold flex items-center gap-3 group relative overflow-hidden"
+                  style={{ background: 'var(--gradient-accent)', boxShadow: '0 10px 40px hsla(24, 95%, 53%, 0.3)' }}
                 >
-                  For Business Owners Click Here
-                  <svg className="w-5 h-5 group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <span className="relative z-10">For Business Owners</span>
+                  <svg className="w-5 h-5 group-hover:translate-y-1 transition-transform relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                   </svg>
+                  <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
                 </Button>
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   variant="outline"
                   onClick={() => setShowFreelancerModal(true)}
-                  className="text-lg px-8 py-6 h-auto rounded-full shadow-lg flex items-center gap-2 group"
+                  className="text-lg px-10 py-7 h-auto rounded-full font-semibold border-2 border-secondary/20 hover:border-secondary/40 flex items-center gap-3 group bg-white/50 backdrop-blur-sm hover:bg-white/80 transition-all"
                 >
-                  For Freelancers Click Here
+                  <span>For Freelancers</span>
                   <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </Button>
               </div>
-              
+
               {/* Stats */}
-              <div className="flex gap-12 pt-8">
-                <div>
-                  <div className="text-4xl font-bold text-secondary">250+</div>
-                  <div className="text-sm text-muted-foreground font-medium">Funnels Built</div>
+              <div className="grid grid-cols-3 gap-8 pt-8 border-t border-secondary/10">
+                <div className="space-y-1">
+                  <div className="text-5xl font-black bg-gradient-to-br from-primary to-primary/70 bg-clip-text text-transparent">250+</div>
+                  <div className="text-sm text-muted-foreground font-medium uppercase tracking-wide">Funnels Built</div>
                 </div>
-                <div>
-                  <div className="text-4xl font-bold text-secondary">4.9★</div>
-                  <div className="text-sm text-muted-foreground font-medium">Client Rating</div>
+                <div className="space-y-1">
+                  <div className="text-5xl font-black bg-gradient-to-br from-accent to-accent/70 bg-clip-text text-transparent flex items-center gap-1">4.9<span className="text-3xl">★</span></div>
+                  <div className="text-sm text-muted-foreground font-medium uppercase tracking-wide">Client Rating</div>
                 </div>
-                <div>
-                  <div className="text-4xl font-bold text-secondary">$15M+</div>
-                  <div className="text-sm text-muted-foreground font-medium">Revenue Generated</div>
+                <div className="space-y-1">
+                  <div className="text-5xl font-black bg-gradient-to-br from-secondary to-secondary/70 bg-clip-text text-transparent">$15M+</div>
+                  <div className="text-sm text-muted-foreground font-medium uppercase tracking-wide">Generated</div>
                 </div>
               </div>
             </div>
 
             {/* Right Column - Vertical Video Card (9:16 for Shorts) */}
             <div className="flex-shrink-0 animate-fade-in">
-              <div className="relative w-[300px] sm:w-[340px] lg:w-[380px] aspect-[9/16] bg-card rounded-[2.5rem] shadow-2xl overflow-hidden border-8 border-secondary hover:scale-105 transition-all duration-300">
-                <img
-                  src={heroThumb}
-                  alt="Business presentation"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/20 transition-colors">
-                  <button className="bg-primary text-primary-foreground rounded-full p-6 hover:scale-110 transition-transform shadow-2xl">
-                    <svg
-                      className="w-12 h-12"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </button>
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-[3rem] blur-2xl"></div>
+                <div className="relative w-[300px] sm:w-[340px] lg:w-[400px] aspect-[9/16] bg-white rounded-[2.5rem] overflow-hidden border border-secondary/10 hover:scale-[1.02] transition-all duration-500 group" style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.15)' }}>
+                  <img
+                    src={heroThumb}
+                    alt="Business presentation"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/60 via-black/30 to-transparent group-hover:from-black/50 group-hover:via-black/20 transition-all duration-300">
+                    <button className="rounded-full p-6 hover:scale-110 transition-all duration-300 relative" style={{ background: 'var(--gradient-accent)', boxShadow: '0 10px 40px hsla(24, 95%, 53%, 0.5)' }}>
+                      <svg
+                        className="w-12 h-12 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div className="absolute top-6 left-6 right-6 flex items-center justify-between">
+                    <div className="px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-secondary">Featured Demo</div>
+                    <div className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center">
+                      <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        
+
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+          <span className="text-xs font-medium text-muted-foreground uppercase tracking-widest">Scroll</span>
           <svg className="w-6 h-6 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
