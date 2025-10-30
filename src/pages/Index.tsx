@@ -424,6 +424,7 @@ const Index = () => {
 
           <CardSlider
             cards={automations}
+            direction="left"
             onCardClick={(card) => {
               setSelectedAutomation(card);
               setShowAutomationModal(true);

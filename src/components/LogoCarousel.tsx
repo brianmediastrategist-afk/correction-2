@@ -42,7 +42,7 @@ export default function LogoCarousel({ logos, title }: LogoCarouselProps) {
               <img
                 src={logo.url}
                 alt={logo.name}
-                className="h-12 object-contain grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.3)]"
+                className="h-12 object-contain transition-all duration-300 group-hover:scale-110 drop-shadow-[0_0_15px_rgba(59,130,246,0.4)] group-hover:drop-shadow-[0_0_30px_rgba(59,130,246,0.6)]"
               />
             </div>
           ))}
